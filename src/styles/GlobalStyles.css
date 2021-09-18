@@ -1,0 +1,38 @@
+:root {
+  --light-bg: #172227;
+  --light-accent-1: #3c575a;
+  --light-accent-2: #E57F84;
+  --light-accent-3: #F4EAE6;
+
+  --dark-bg: #222831;
+  --dark-accent-1: #393E46;
+  --dark-accent-2: #FFD369;
+  --dark-accent-3: #EEEEEE;
+}
+
+.light {
+  --bg: var(--light-bg);
+  --accent-1: var(--light-accent-1);
+  --accent-2: var(--light-accent-2);
+  --accent-3: var(--light-accent-3);
+}
+
+.dark {
+  --bg: var(--dark-bg);
+  --accent-1: var(--dark-accent-1);
+  --accent-2: var(--dark-accent-2);
+  --accent-3: var(--dark-accent-3);
+}
+
+
+html {
+  background-attachment: fixed;
+  font-size: 10px;
+  background-color: var(--bg);
+}
+
+body {
+  font-size: 2rem;
+  background-color: var(--bg);
+}
+

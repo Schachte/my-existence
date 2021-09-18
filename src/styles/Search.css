@@ -1,0 +1,4 @@
+.highlight {
+    color:var(--bg);
+    background-color: var(--accent-2);
+}
