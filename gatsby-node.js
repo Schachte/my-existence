@@ -14,20 +14,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `)
 
-    const result = await graphql(`
-      query TagBasedAggregation($tags: StringQueryOperatorInput = {}) {
-        allMarkdownRemark(filter: {frontmatter: {tags: $tags}}) {
-          nodes {
-            frontmatter {
-              title
-              date
-            }
-            id
-          }
-        }
-      }
-    `)
-
     const tags = await graphql(`
       query TagAggregationQuery {
         allMarkdownRemark {
@@ -48,10 +34,12 @@ exports.createPages = async ({ graphql, actions }) => {
       .map(item => ({...item, modified: item.original.toLowerCase()}))
       .map(item => ({...item, modified: item.modified.replaceAll(" ", "-")}))
 
+    const searchTemplate = path.resolve('./src/templates/search.js')
+
     resultantTags.forEach((tag) => {
       actions.createPage({
         path: `/search/tag/${tag['modified']}`,
-        component: path.resolve('./src/templates/search.js'),
+        component: searchTemplate,
         context: {
           tags: tags.data,
           tag: tag['original']
@@ -59,15 +47,16 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
+    const postTemplate = path.resolve('./src/templates/post.js')
     data.allMarkdownRemark.nodes.forEach((post) => {
+      const titleSlug = post.frontmatter.title.replaceAll(" ", "-").toLowerCase()
         actions.createPage({
-            path: '/blog/' + post.frontmatter.title.replaceAll(" ", "-").toLowerCase(),
-            component: path.resolve('./src/templates/post.js'),
+            path: `/blog/${titleSlug}`,
+            component: postTemplate,
             context: {
                 title: post.frontmatter.title,
                 id: post.id
             }
         })
     })
-
 }

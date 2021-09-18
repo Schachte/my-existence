@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import '../styles/Blog.css'
 import Tags from './Tags';
 import { navigate } from 'gatsby';
-
 import { Link as GatsbyLink } from "gatsby";
-import { PageQueryStore } from '../../.cache/query-result-store';
 
 const StyledLink = styled(GatsbyLink)`
     display: flex;

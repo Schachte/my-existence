@@ -151,7 +151,8 @@ const CopySpan = styled.span`
 `
 
 export default function Layout({ children }) {
-    const { pathname } = window.location;
+    // const { pathname } = window.location;
+    const pathname = "ryan"
     const { theme, toggle } = useContext(ThemeContext);
 
     useEffect(()  => {

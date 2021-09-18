@@ -77,9 +77,11 @@ export default function Search({ data }) {
     ...data.allMarkdownRemark.nodes.map(node => node.frontmatter)
   ]
 
-  const tagName = window.location.pathname
-                        .split("/")
-                        .splice(-1)[0]
+  // const tagName = window.location.pathname
+  //                       .split("/")
+  //                       .splice(-1)[0]
+
+  const tagName = "ryan"
 
   return (
       <Layout>
