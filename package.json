@@ -13,14 +13,16 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public site"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
+    "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-styled-components": "^4.14.0",
     "gatsby-remark-prismjs": "^5.10.0",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-remark": "^4.10.0",
