@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-search-js",
+    "path": "/search/tag/rants",
+    "result": {"data":{"allMarkdownRemark":{"nodes":[{"frontmatter":{"title":"Deeply Understanding Recursion","date":"February 20th, 2021"}}]}},"pageContext":{"tags":{"allMarkdownRemark":{"nodes":[{"frontmatter":{"tags":["databases","tutorials"],"title":"Database Indices & Performance","date":"February 20th, 2020"}},{"frontmatter":{"tags":["algorithms","reading","rants"],"title":"Deeply Understanding Recursion","date":"February 20th, 2021"}}]}},"tag":"rants"}},
+    "staticQueryHashes": []}

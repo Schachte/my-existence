@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[851],{9857:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});var r=n(7294);function a(e){var t=e.data,n=t.markdownRemark.frontmatter,a=(n.title,n.description,n.date,n.tags,t.markdownRemark.html);return r.createElement(r.Fragment,null,r.createElement("div",{dangerouslySetInnerHTML:{__html:a}}))}}}]);
+//# sourceMappingURL=component---src-templates-post-js-a081198766e79fe65fa7.js.map
