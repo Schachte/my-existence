@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/personal`,
   siteMetadata: {
     siteUrl: "https://ryan-schachte.com",
     title: "Personal Blog",
